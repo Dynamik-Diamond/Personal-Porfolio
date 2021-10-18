@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <main>
-      <div className='back-btn-container'>
+      {/* <div className='back-btn-container'>
         <Link to='/' className='btn btn-home'>
           back home
         </Link>
-      </div>
+      </div> */}
       <section className='about-section'>
         <div className='container about-container'>
           <article className='about-info'>

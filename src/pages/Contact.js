@@ -3,11 +3,70 @@ import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
-    <main>
-      <div className='back-btn-container'>
-        <Link to='/' className='btn btn-home'>
-          back home
-        </Link>
+    <main className='contact-page contact-section'>
+      <article className='container'>
+        <h2 className='contact-title'>
+          Contact.
+        </h2>
+      </article>
+      <div className='form-control'>
+        <form
+          action=''
+          method='post'
+          className='form container'
+        >
+          <div className='col-1'>
+            <div className='form-row'>
+              <label
+                htmlFor='name'
+                className='form-label'
+              >
+                Name
+              </label>
+              <input
+                type='text'
+                name='name'
+                id='name'
+                className='form-input'
+              />
+            </div>
+            <div className='form-row'>
+              <label
+                htmlFor='email'
+                className='form-label'
+              >
+                Email
+              </label>
+              <input
+                type='text'
+                name='email'
+                id='email'
+                className='form-input'
+              />
+            </div>
+          </div>
+          <div className='col-2'>
+            <div className='form-row'>
+              <label
+                htmlFor='message'
+                className='form-label'
+              >
+                Message
+              </label>
+              <textarea
+                name='message'
+                id='message'
+                className='form-textarea'
+              ></textarea>
+            </div>
+            <button
+              type='submit'
+              className='form-btn'
+            >
+              Send email
+            </button>
+          </div>
+        </form>
       </div>
     </main>
   );
