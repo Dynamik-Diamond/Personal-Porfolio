@@ -15,57 +15,60 @@ function Contact() {
           method='post'
           className='form container'
         >
-          <div className='col-1'>
-            <div className='form-row'>
-              <label
-                htmlFor='name'
-                className='form-label'
-              >
-                Name
-              </label>
-              <input
-                type='text'
-                name='name'
-                id='name'
-                className='form-input'
-              />
+          <div className='input-container'>
+            <div className='col-1'>
+              <div className='form-row'>
+                <label
+                  htmlFor='name'
+                  className='form-label'
+                >
+                  Name
+                </label>
+                <input
+                  type='text'
+                  name='name'
+                  id='name'
+                  className='form-input'
+                />
+              </div>
+              <div className='form-row'>
+                <label
+                  htmlFor='email'
+                  className='form-label'
+                >
+                  Email
+                </label>
+                <input
+                  type='text'
+                  name='email'
+                  id='email'
+                  className='form-input'
+                />
+              </div>
             </div>
-            <div className='form-row'>
-              <label
-                htmlFor='email'
-                className='form-label'
-              >
-                Email
-              </label>
-              <input
-                type='text'
-                name='email'
-                id='email'
-                className='form-input'
-              />
+            <div className='col-2'>
+              <div className='form-row'>
+                <label
+                  htmlFor='message'
+                  className='form-label'
+                >
+                  Message
+                </label>
+                <textarea
+                  name='message'
+                  id='message'
+                  className='form-textarea'
+                ></textarea>
+              </div>
             </div>
           </div>
-          <div className='col-2'>
-            <div className='form-row'>
-              <label
-                htmlFor='message'
-                className='form-label'
-              >
-                Message
-              </label>
-              <textarea
-                name='message'
-                id='message'
-                className='form-textarea'
-              ></textarea>
-            </div>
-            <button
-              type='submit'
-              className='form-btn'
-            >
-              Send email
-            </button>
-          </div>
+
+          <button
+            type='submit'
+            className='form-btn'
+          >
+            Send email
+          </button>
         </form>
       </div>
     </main>
