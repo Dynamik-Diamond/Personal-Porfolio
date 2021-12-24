@@ -20,40 +20,45 @@ const Sidebar = () => {
           : 'sidebar-wrapper'
       }`}
     >
-      <div className='sidebar'>
+      <div className="sidebar">
         <button
-          className='close-btn'
+          className="close-btn"
           onClick={closeSidebar}
         >
           <FaTimes />
         </button>
 
         {/* SUBLINKS */}
-        <div className='sublink-container'>
-          <ul className='sub-links'>
+        <div className="sublink-container">
+          <ul className="sub-links">
             <li>
-              <Link to='/'>Home</Link>
+              <Link to="/" onClick={closeSidebar}>
+                Home
+              </Link>
             </li>
             <li>
               <Link
-                to='/about'
-                className='side-link'
+                to="/about"
+                className="side-link"
+                onClick={closeSidebar}
               >
                 About
               </Link>
             </li>
             <li>
               <Link
-                to='/work'
-                className='side-link'
+                to="/work"
+                className="side-link"
+                onClick={closeSidebar}
               >
                 Work
               </Link>
             </li>
             <li>
               <Link
-                to='/contact'
-                className='side-link'
+                to="/contact"
+                className="side-link"
+                onClick={closeSidebar}
               >
                 contact
               </Link>
@@ -61,24 +66,43 @@ const Sidebar = () => {
           </ul>
 
           {/* icon-links */}
-          <ul className='sub-icon-links'>
+          <ul className="sub-icon-links">
             <li>
-              <a href='' className='sub-icon'>
+              <a
+                href="https://github.com/Stone535"
+                target="_blank"
+                className="sub-icon"
+                onClick={closeSidebar}
+              >
                 <FaGithubSquare />
               </a>
             </li>
-            <li>
-              <a href='' className='sub-icon '>
+            {/* <li>
+              <a
+                href=""
+                target="_blank"
+                className="sub-icon "
+              >
                 <FaBehanceSquare />
               </a>
-            </li>
+            </li> */}
             <li>
-              <a href='' className='sub-icon'>
+              <a
+                href="http://www.linkedin.com/in/diamond-imariabe"
+                target="_blank"
+                className="sub-icon"
+                onClick={closeSidebar}
+              >
                 <FaLinkedin />
               </a>
             </li>
             <li>
-              <a href='' className='sub-icon'>
+              <a
+                href="mailto:imariabediamond@gmail.com"
+                target="_blank"
+                className="sub-icon"
+                onClick={closeSidebar}
+              >
                 <FaEnvelope />
               </a>
             </li>

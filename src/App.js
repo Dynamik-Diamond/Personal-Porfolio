@@ -21,19 +21,19 @@ function App() {
         <Navbar />
         <Sidebar />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path='/About'>
+          <Route exact path="/About">
             <About />
           </Route>
-          <Route exact path='/work'>
+          <Route exact path="/work">
             <Work />
           </Route>
-          <Route exact path='/Contact'>
+          <Route exact path="/Contact">
             <Contact />
           </Route>
-          <Route exact path='*'>
+          <Route exact path="*">
             <Error />
           </Route>
         </Switch>

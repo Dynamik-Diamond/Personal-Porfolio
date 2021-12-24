@@ -9,11 +9,12 @@ import {
   FaLinkedin,
 } from 'react-icons/fa';
 
-import { data } from '../data';
+import { data1 } from '../data';
 import { Link } from 'react-router-dom';
-
+import Footer from '../component/footer';
+import { FadeInSection } from '../component/Fade-in-out';
 const Home = () => {
-  const [projects, setProjects] = React.useState(data);
+  const [projects, setProjects] = React.useState(data1);
   return (
     <main>
       <div className="section hero-section">
@@ -24,20 +25,23 @@ const Home = () => {
               <span className="hero-span">I’m Diamond</span>
             </h2>
             <p className="hero-text">
-              UX Designer and a Frontend Web developer
-              passionate about designing and building useful
-              digital solutions focused on delivering great
-              user experiences.
+              A Frontend Web developer passionate about
+              designing and building useful digital
+              solutions focused on delivering great user
+              experiences.
             </p>
             <div className="hero-buttons">
-              <button className="btn hero-btn flex">
+              <button className="btn hero-btn">
+                Let's work together!
+              </button>
+              {/* <button className="btn hero-btn flex">
                 <FaEnvelope className="fa-icon" />
                 Send a Email
               </button>
               <button className="btn hero-btn-cv flex">
                 <FaDownload className="fa-icon" />
                 Download CV
-              </button>
+              </button> */}
             </div>
           </article>
           <div className="hero-img">
@@ -58,76 +62,53 @@ const Home = () => {
             <h5 className="subtitle">
               few designs and websites i have worked on
               recently. You Want to see more ?{' '}
-              <Link to="/contact" className="email-link">
-                Email Me
-              </Link>
+              <li className="email-list-link">
+                <a
+                  href="mailto:imariabediamond@gmail.com"
+                  className="email-link"
+                >
+                  Email me
+                </a>
+              </li>
             </h5>
             <div className="card container">
               {projects.map(project => {
                 const { id, desc, view, img, link } =
                   project;
                 return (
-                  <article
-                    key={id}
-                    className="project-card"
-                  >
-                    <div className="photo-card-container">
-                      <img
-                        src={img}
-                        alt="project-photo"
-                        className="img photo-card"
-                      />
+                  <FadeInSection>
+                    <article
+                      key={id}
+                      className="project-card home-card"
+                    >
+                      <div className="photo-card-container">
+                        <img
+                          src={img}
+                          alt="project-photo"
+                          className="img photo-card"
+                        />
 
-                      <div className="photo-info">
-                        <p>{desc}</p>
-                        <a
-                          href={link}
-                          className="btn photo-link"
-                          target="_blank"
-                        >
-                          <FaEye className="eye-icon" />
-                          {view}
-                        </a>
+                        <div className="photo-info">
+                          <p>{desc}</p>
+                          <a
+                            href={link}
+                            className="btn photo-link"
+                            target="_blank"
+                          >
+                            <FaEye className="eye-icon" />
+                            {view}
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </article>
+                    </article>
+                  </FadeInSection>
                 );
               })}
             </div>
           </article>
         </div>
       </section>
-      <footer className="footer">
-        <div className="footerlink-container container">
-          {/* footer-links */}
-          <ul className="footer-links">
-            <li>
-              <Link to="/" className="footer-link">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="footer-link">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/work" className="footer-link">
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="footer-link">
-                contact
-              </Link>
-            </li>
-          </ul>
-          {/* end of footer link */}
-          <div className="footer-text">
-            <p>&copy; 2021 Diamond Imariabe</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 };
