@@ -32,7 +32,9 @@ const Home = () => {
             </p>
             <div className="hero-buttons">
               <button className="btn hero-btn">
-                Let's work together!
+                <a href="mailto:imariabediamond@gmail.com">
+                  Let's work together!
+                </a>
               </button>
               {/* <button className="btn hero-btn flex">
                 <FaEnvelope className="fa-icon" />

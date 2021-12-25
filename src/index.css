@@ -157,6 +157,10 @@ ul {
   border: 1px solid var(--nav-greydark-color);
 }
 
+.hero-btn a {
+  color: var(--white);
+}
+
 .hero-btn:hover {
   border: 2px solid var(--primary-body-color);
   color: var(--secondary-brownish-gold-color);
